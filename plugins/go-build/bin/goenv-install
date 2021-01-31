@@ -215,13 +215,13 @@ if [ "$STATUS" == "2" ]; then
     candidates="$(definitions "$DEFINITION")"
     here="$(dirname "${0%/*}")/../.."
     if [ -n "$candidates" ]; then
-      echo
+      echo ''
       echo "The following versions contain '$DEFINITION' in the name:"
       echo "$candidates" | indent
     fi
-    echo
+    echo ''
     echo "See all available versions with 'goenv install --list'."
-    echo
+    echo ''
     echo -n "If the version you need is missing, try upgrading goenv"
     if [ "$here" != "${here#$(brew --prefix 2>/dev/null)}" ]; then
       printf ":\n\n"

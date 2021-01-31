@@ -90,10 +90,10 @@ echo "goenv: '$GOENV_COMMAND' command not found" >&2
 versions="$(goenv-whence "$GOENV_COMMAND" || true)"
 if [ -n "$versions" ]; then
   {
-    echo
+    echo ''
     echo "The '$1' command exists in these Go versions:"
     echo "$versions" | sed 's/^/  /g'
-    echo
+    echo ''
   } >&2
 fi
 

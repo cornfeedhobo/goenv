@@ -68,7 +68,7 @@ if [ -z "$print" ]; then
   {
     echo "# Load goenv automatically by appending"
     echo "# the following to ${profile}:"
-    echo
+    echo ''
     case "$shell" in
     fish )
       echo 'status --is-interactive; and source (goenv init -|psub)'
@@ -77,7 +77,7 @@ if [ -z "$print" ]; then
       echo 'eval "$(goenv init -)"'
       ;;
     esac
-    echo
+    echo ''
   } >&2
 
   exit 0
